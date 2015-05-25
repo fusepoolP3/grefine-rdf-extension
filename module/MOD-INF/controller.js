@@ -130,6 +130,7 @@ function init() {
     RefineServlet.registerCommand(module, "save-prefixes", new SavePrefixesCommand(ctxt));
     RefineServlet.registerCommand(module, "get-default-prefixes", new GetDefaultPrefixesCommand(ctxt));
     RefineServlet.registerCommand(module, "add-prefix", new AddPrefixCommand(ctxt));
+	RefineServlet.registerCommand(module, "import-neologism-repository", new ImportNeologismCommand(ctxt));
     RefineServlet.registerCommand(module, "remove-prefix", new RemovePrefixCommand(ctxt));
     RefineServlet.registerCommand(module, "refresh-prefix", new RefreshPrefixCommand(ctxt));
     RefineServlet.registerCommand(module, "suggest-term", new SuggestTermCommand(ctxt));
@@ -165,6 +166,7 @@ function init() {
             "scripts/rdf-schema-manage-vocabs-widget.js",
             "scripts/rdf-schema-vocabulary-manager.js",
             "scripts/rdf-schema-new-prefix-widget.js",
+			"scripts/rdf-schema-import-neologism-widget.js",
             "scripts/externals/jquery.form.js",
             "scripts/sindice/sindice-dialog.js",
             "scripts/common.js"

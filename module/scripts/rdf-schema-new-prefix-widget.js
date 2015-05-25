@@ -6,14 +6,22 @@ NewPrefixWidget.prototype.show = function(msg,def_prefix,onDone){
 	var self = this;
     var frame = DialogSystem.createDialog();
     
-    frame.width("350px");
+   frame.width("350px");
 
     var html = $(DOM.loadHTML("rdf-extension","scripts/new-prefix-widget.html"));
     
     var header = $('<div></div>').addClass("dialog-header").text("New Prefix").appendTo(frame);
     var body = $('<div class="grid-layout layout-full"></div>').addClass("dialog-body").append(html).appendTo(frame);
     var footer = $('<div></div>').addClass("dialog-footer").appendTo(frame);
-    
+    /*
+
+		self._prefixes.push({name:name,uri:uri});
+
+		self._savePrefixes(function(){
+            self._showPrefixes();
+        });
+*/
+
     self._elmts = DOM.bind(html);
     if(msg){
     	self._elmts.message.addClass('message').html(msg);
@@ -55,6 +63,7 @@ NewPrefixWidget.prototype.show = function(msg,def_prefix,onDone){
     		return;
     	}
 		dismissBusy = DialogSystem.showBusy('Trying to import vocabulary from ' + uri);
+
     	$.post("command/rdf-extension/add-prefix",{name:name,uri:uri,"fetch-url":uri,project: theProject.id,fetch:fetchOption},function(data){
     		if (data.code === "error"){
     			alert('Error:' + data.message)
@@ -81,9 +90,7 @@ NewPrefixWidget.prototype.show = function(msg,def_prefix,onDone){
         self._elmts.fetching_options_table.show();
         $('#advanced_options_button').attr("disabled", "disabled");
     }).appendTo(footer);
-    
-    
-    
+
     var level = DialogSystem.showDialog(frame);
     
     self._elmts.fetching_options_table

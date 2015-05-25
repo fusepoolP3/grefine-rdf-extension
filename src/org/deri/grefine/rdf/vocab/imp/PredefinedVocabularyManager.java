@@ -151,7 +151,7 @@ public class PredefinedVocabularyManager implements IPredefinedVocabularyManager
     	writer.array();
     	for(Vocabulary v:this.predefinedVocabulariesMap.values()){
     		v.write(writer);
-    	}
+    	}http://purl.org/dc/terms/
     	writer.endArray();
 		writer.endObject();
 	}

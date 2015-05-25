@@ -3,3 +3,5 @@ rdfs	http://www.w3.org/2000/01/rdf-schema#	http://www.w3.org/2000/01/rdf-schema#
 owl	http://www.w3.org/2002/07/owl#	http://www.w3.org/2002/07/owl#
 xsd	http://www.w3.org/2001/XMLSchema#	http://www.w3.org/2001/XMLSchema#
 foaf	http://xmlns.com/foaf/0.1/	http://xmlns.com/foaf/spec/index.rdf
+vann	http://purl.org/vocab/vann/	http://purl.org/vocab/vann/
+dcterms	http://purl.org/dc/terms/	http://purl.org/dc/terms/

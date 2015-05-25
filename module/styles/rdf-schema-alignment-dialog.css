@@ -80,6 +80,15 @@ a.add-prefix-box{
     color:#0000EE;
 }
 
+a.add-neologism-box{
+	background-image: url(../images/add.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	padding-left:14px;
+	margin-left:4px;
+	color:#0000EE;
+}
+
 a.manage-vocabularies-box{
 	background-image: url(../images/configure.png);
     background-repeat: no-repeat;

@@ -1,5 +1,8 @@
+*.idea
 *~
 *.class
 *.lock
+*.xml
+*.iml
 *.DS_Store
 module/MOD-INF/classes/*
