@@ -10,7 +10,7 @@ ImportNeologismWidget.prototype.show = function (msg, def_prefix, onDone) {
 
     var html = $(DOM.loadHTML("rdf-extension", "scripts/import-neologism-widget.html"));
 
-    var header = $('<div></div>').addClass("dialog-header").text("Import Neoologism Repository").appendTo(frame);
+    var header = $('<div></div>').addClass("dialog-header").text("Import Neologism Repository").appendTo(frame);
     var body = $('<div class="grid-layout layout-full"></div>').addClass("dialog-body").append(html).appendTo(frame);
     var footer = $('<div></div>').addClass("dialog-footer").appendTo(frame);
 
